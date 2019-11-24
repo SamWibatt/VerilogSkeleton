@@ -3,13 +3,10 @@
 
 module blinky(
     input wire i_clk,
-    output wire o_led       //temp debug
-    //here will go all the address and data lines and stuff - make the addr width variable
-    );
+    output wire o_led
+);
 
     parameter CBITS = 26;
-
-    //here will go all the address and data lines and stuff
 
     reg	[CBITS-1:0]	counter = 0;
     always @(posedge i_clk)
