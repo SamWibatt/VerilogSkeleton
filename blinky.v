@@ -1,9 +1,6 @@
-// this will be a module to access a 1Mx8 SRAM / flash module such as I own for soldering practice. They will be useful for
-// testing data structure acceleration, too, I reckon.
-
+//Based on Dan Gisselquist's blinky at https://zipcpu.com/blog/2017/05/19/blinky.html
 `default_nettype none
 
-// FOR STARTERS JUST USING CLIFFORD WOLF'S BLINKY
 module blinky(
     input wire i_clk,
     output wire o_led       //temp debug
