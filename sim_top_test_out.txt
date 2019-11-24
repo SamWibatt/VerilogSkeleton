@@ -1,2 +1,0 @@
-VCD info: dumpfile top_test.vcd opened for output.
-and away we go!!!1
