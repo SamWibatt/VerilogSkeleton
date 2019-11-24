@@ -50,7 +50,7 @@ module top(
     wire led_b_outwire; // = greenblinkct[GREENBLINKBITS-1];
     //wire led_r_outwire;
 
-    //then the sram module proper, currently a blinkois
+    //then the blinky module proper
     //let us have it blink on the blue upduino LED.
     blinky ram(.i_clk(clk),.o_led(led_b_outwire));
 
