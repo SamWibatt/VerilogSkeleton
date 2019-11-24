@@ -2,6 +2,8 @@
 
 Skeleton project for Verilog / IceStorm.
 
+The idea is to make top.v the main module for the .bin file, and top_test.v is the testbench top module. You can have any number of submodules - see Makefile for how to organize this.
+
 # Usage
 
 `make all` is intended to build the .bin output file to send to the target hardware
