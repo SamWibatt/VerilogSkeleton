@@ -14,6 +14,10 @@ toolchain is yosys / nextpnr / icepack
 
 toolchain is iverilog / vvp / vcd2fst, yielding a .fst file that can be viewed in gtkwave
 
+`make clean` does the usual cleanup of all the non-source files.
+
+stdout and stderr are redirected during the compile, to build_top_out.txt and build_top_err.txt for the "all" target, to sim_top_tb_out.txt and sim_top_tb_err.txt in the "test" target.
+
 *need to test `make flash` and `make gui` and `make pll`*
 
 Makefile, Makefile.icestorm, and upduino_v2.pcf are copied and modified from osresearch's code at https://github.com/osresearch/up5k licensed under GPL3
