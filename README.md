@@ -26,6 +26,8 @@ Makefile, Makefile.icestorm, and upduino_v2.pcf are copied and modified from osr
 
 Oh wow it looks like the Atom previewer, anyway
 
+And indeed github does too!
+
 ```verilog
 //Based on Dan Gisselquist's blinky at https://zipcpu.com/blog/2017/05/19/blinky.html
 `default_nettype none
