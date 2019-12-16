@@ -27,21 +27,9 @@ module top_test();
     `endif
     blinky #(.CBITS(cbits)) blinkus(.i_clk(clk),.o_led(led_b_outwire));
 
-    reg[4:0] count = 0;
-    wire[6:0] segout;
-    PL_L0_BCD7 bcd27seg(
-        .val(count[3:0]),
-        .hex(count[4]),
-        .seg(segout)
-    );
-
-
     always @(posedge clk) begin
         //this should drive the blinkingness
         led_reg <= led_b_outwire;
-
-        //and this the bcd output - just cycle the counter and high bit is "hex" and the lower 4 are the 7-seg
-        count <= count + 1;
     end
 
     //bit for creating gtkwave output
