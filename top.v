@@ -52,11 +52,14 @@ module top(
 
     //then the blinky module proper
     //let us have it blink on the blue upduino LED.
-    blinky ram(.i_clk(clk),.o_led(led_b_outwire));
+    blinky blinkus(.i_clk(clk),.o_led(led_b_outwire));
 
+    parameter PWMbits = 3;              // for dimming have LED on only 1/2^PWMbits of the time
+    reg[PWMbits-1:0] pwmctr = 0;
     always @(posedge clk) begin
         //this should drive the blinkingness
-        led_b_pwm_reg <= led_b_outwire;
+        led_b_pwm_reg <= (&pwmctr) & led_b_outwire;
+        pwmctr <= pwmctr + 1;
     end
 
 endmodule
