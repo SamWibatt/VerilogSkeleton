@@ -17,11 +17,25 @@ Currently supported are:
 * icebreaker (doesn't have pcf file, I don't own one to test, needs LED blink code)
 * tomu (doesn't have pcf file, I don't own one to test, needs LED blink code)
 
+Next, copy the appropriate "top" source file to `top.v`. For instance, if you're building for icestick, do
+
+`cp top-icestick.v top.v`
+
+OR you can change the list of required files in Makefile for the alldeps target from
+
+`alldeps = top.v $(submodules)` to
+
+`alldeps = top-icestick.v $(submodules)`
+
+**(VERIFY THAT THIS WORKS!)**
+
 `make all` is intended to build the .bin output file to send to the target hardware
 
 toolchain is yosys / nextpnr / icepack
 
 `make test` is intended to build a simulation
+
+`top-test.v` as written will work with all platforms; it doesn't use any of the hardware-specific settings. Try to keep it that way.
 
 toolchain is iverilog / vvp / vcd2fst, yielding a .fst file that can be viewed in gtkwave
 
@@ -32,6 +46,11 @@ stdout and stderr are redirected during the compile, to build_top_out.txt and bu
 *need to test `make flash` and `make gui` and `make pll`*
 
 Makefile, Makefile.icestorm, and upduino_v2.pcf are copied and modified from osresearch's code at https://github.com/osresearch/up5k licensed under GPL3
+
+tinyfpga-bx.pcf is copied and modified from Luke Valenty's `pins.pcf` code at https://github.com/tinyfpga/TinyFPGA-BX/tree/master/apio_template, licensed under CERN Open Hardware Licence v1.2. 
+
+icestick.pcf is copied and modified from Juan Gonzalez's code at https://github.com/FPGAwars/apio-examples
+
 
 # test to see if markdown on github can syntax highlight verilog
 
