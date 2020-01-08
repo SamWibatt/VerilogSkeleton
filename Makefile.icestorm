@@ -6,6 +6,9 @@ DEVICE-icebreaker ?= up5k
 FOOTPRINT-icebreaker ?= sg48
 PIN_SRC-icebreaker ?= icebreaker.pcf
 
+DEVICE-icestick ?= hx1k
+FOOTPRINT-icestick ?= tq144
+PIN_SRC-icestick ?= icestick.pcf
 
 DEVICE-tinyfpga := lp8k
 FOOTPRINT-tinyfpga := cm81
