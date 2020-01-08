@@ -6,6 +6,17 @@ The idea is to make top.v the main module for the .bin file, and top_test.v is t
 
 # Usage
 
+First, change the `BOARD` value in Makefile.icestorm to the board you plan to use.
+
+**YOU MAY NEED TO ADD ITS CONFIGURATION VALUES FOR DEVICE AND PACKAGE TO Makefile.icestorm.**
+
+Currently supported are:
+* upduino v2
+* iceStick (*not yet tested and needs LED blink code*)
+* tinyFPGA BX (*not yet tested and needs LED blink code*)
+* icebreaker (doesn't have pcf file, I don't own one to test, needs LED blink code)
+* tomu (doesn't have pcf file, I don't own one to test, needs LED blink code)
+
 `make all` is intended to build the .bin output file to send to the target hardware
 
 toolchain is yosys / nextpnr / icepack
