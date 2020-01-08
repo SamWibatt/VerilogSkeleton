@@ -11,7 +11,7 @@ First, change the `BOARD` value in Makefile.icestorm to the board you plan to us
 **YOU MAY NEED TO ADD ITS CONFIGURATION VALUES FOR DEVICE AND PACKAGE TO Makefile.icestorm.**
 
 Currently supported are:
-* upduino v2
+* upduino v2 (default, tested on [Gnarly Grey Upduino v2](http://www.gnarlygrey.com/) and [tinyVision.ai Upduino v2.1](https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/))
 * iceStick (*not yet tested and needs LED blink code*)
 * tinyFPGA BX (*not yet tested and needs LED blink code*)
 * icebreaker (doesn't have pcf file, I don't own one to test, needs LED blink code)
