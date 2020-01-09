@@ -38,9 +38,11 @@ and replace the right-hand side with:
     ```
 * think of a name for your board. For example, `notexist` that is based on iCE40-LP1K-CM49
     ```
-    DEVICE-upduino ?= lp1k
-    FOOTPRINT-upduino ?= cm49
-    PIN_SRC-upduino ?= notexist.pcf
+    DEVICE-notexist ?= lp1k
+    FOOTPRINT-notexist ?= cm49
+    PIN_SRC-notexist ?= notexist.pcf
+    [...]
+    BOARD ?= notexist
     ```
 * create or procure a pcf file for your board and call it notexist.pcf (you can call it what you want, jsut so the file name is there in the PIN_SRC line.)
 * if different build tools are needed, you'll need to change Makefile.icestorm (will investigate with e.g. Orange Crab or TinyFPGA EX when they become available.)
@@ -125,7 +127,7 @@ module blinky(
 
     reg	[CBITS-1:0]	counter = 0;
     always @(posedge i_clk)
-    counter <= counter + 1'b1;
+        counter <= counter + 1'b1;
     assign o_led = counter[CBITS-1];
 endmodule
 ```
