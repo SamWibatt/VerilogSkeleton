@@ -19,6 +19,7 @@ Currently supported are:
     * so far haven't gotten it working, did the apio install sorta, keep getting device or resource busy
     * https://github.com/tinyfpga/TinyFPGA-BX/issues/4#
     * did install of apio except for the icestorm step here - https://tinyfpga.com/bx/guide.html bc I don't want to overwrite the tools I have been using. iceprog doesn't work.
+    * Got tinyprog working by following DaveMcEwan's advice on https://github.com/tinyfpga/TinyFPGA-BX/issues/4# - `sudo apt purge modemmanager` did the trick.
 * `BOARD ?= icebreaker` [icebreaker FPGA](https://www.crowdsupply.com/1bitsquared/icebreaker-fpga) (doesn't have pcf file, I don't own one to test, needs LED blink code)
 * `BOARD ?= tomu` [tomu FPGA - I think this is the right link](https://www.crowdsupply.com/sutajio-kosagi/fomu) (doesn't have pcf file, I don't own one to test, needs LED blink code)
 
@@ -34,7 +35,7 @@ OR you can change the list of required files in Makefile for the alldeps target 
 
 **(VERIFY THAT THIS WORKS!)**
 
-`make all` is intended to build the .bin output file to send to the target hardware
+`make all` is intended to build the .bin output file to send to the target hardware. iceprog works to send it to icestick and upduino v2(.1), tinyprog for tinyfpga-bx.
 
 toolchain is yosys / nextpnr / icepack
 
