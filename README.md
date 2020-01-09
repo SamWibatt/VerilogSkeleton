@@ -11,11 +11,11 @@ First, change the `BOARD` value in Makefile.icestorm to the board you plan to us
 **YOU MAY NEED TO ADD ITS CONFIGURATION VALUES FOR DEVICE AND PACKAGE TO Makefile.icestorm.**
 
 Currently supported are:
-* upduino v2 (default, tested on [Gnarly Grey Upduino v2](http://www.gnarlygrey.com/) and [tinyVision.ai Upduino v2.1](https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/))
-* iceStick (*not yet tested and needs LED blink code*)
-* tinyFPGA BX (*not yet tested and needs LED blink code*)
-* icebreaker (doesn't have pcf file, I don't own one to test, needs LED blink code)
-* tomu (doesn't have pcf file, I don't own one to test, needs LED blink code)
+* `BOARD ?= upduino` upduino v2 (default, tested on [Gnarly Grey Upduino v2](http://www.gnarlygrey.com/) and [tinyVision.ai Upduino v2.1](https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/))
+* `BOARD ?= icestick` iceStick (*not yet tested and needs LED blink code*)
+* `BOARD ?= tinyfpga` tinyFPGA BX (*not yet tested and needs LED blink code*)
+* `BOARD ?= icebreaker` icebreaker (doesn't have pcf file, I don't own one to test, needs LED blink code)
+* `BOARD ?= tomu` tomu (doesn't have pcf file, I don't own one to test, needs LED blink code)
 
 Next, copy the appropriate "top" source file to `top.v`. For instance, if you're building for icestick, do
 
@@ -43,7 +43,7 @@ toolchain is iverilog / vvp / vcd2fst, yielding a .fst file that can be viewed i
 
 stdout and stderr are redirected during the compile, to build_top_out.txt and build_top_err.txt for the "all" target, to sim_top_tb_out.txt and sim_top_tb_err.txt in the "test" target.
 
-*need to test `make flash` and `make gui` and `make pll`*
+* need to test `make flash` and `make gui` and `make pll`*
 
 Makefile, Makefile.icestorm, and upduino_v2.pcf are copied and modified from osresearch's code at https://github.com/osresearch/up5k licensed under GPL3
 
