@@ -16,6 +16,9 @@ Currently supported are:
 * `BOARD ?= upduino` upduino v2 (default, tested on [Gnarly Grey Upduino v2](http://www.gnarlygrey.com/) and [tinyVision.ai Upduino v2.1](https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/))
 * `BOARD ?= icestick` [Lattice iceStick](http://www.latticesemi.com/icestick) (*not yet tested and needs LED blink code*)
 * `BOARD ?= tinyfpga` [tinyFPGA BX](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx) (*not yet tested and needs LED blink code*)
+    * so far haven't gotten it working, did the apio install sorta, keep getting device or resource busy
+    * https://github.com/tinyfpga/TinyFPGA-BX/issues/4#
+    * did install of apio except for the icestorm step here - https://tinyfpga.com/bx/guide.html bc I don't want to overwrite the tools I have been using. iceprog doesn't work.
 * `BOARD ?= icebreaker` [icebreaker FPGA](https://www.crowdsupply.com/1bitsquared/icebreaker-fpga) (doesn't have pcf file, I don't own one to test, needs LED blink code)
 * `BOARD ?= tomu` [tomu FPGA - I think this is the right link](https://www.crowdsupply.com/sutajio-kosagi/fomu) (doesn't have pcf file, I don't own one to test, needs LED blink code)
 
