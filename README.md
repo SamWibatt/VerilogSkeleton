@@ -1,4 +1,4 @@
-# VerilogSkeleton
+# VerilogSkeleton: IN PROGRESS
 
 Skeleton project for Verilog / IceStorm.
 
