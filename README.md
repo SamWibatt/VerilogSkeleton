@@ -4,6 +4,8 @@ Skeleton project for Verilog / IceStorm.
 
 The idea is to make top.v the main module for the .bin file, and top_test.v is the testbench top module. You can have any number of submodules - see Makefile for how to organize this.
 
+Implements a blinky for testing, which you can pull out and replace with your own design.
+
 # Usage
 
 First, change the `BOARD` value in Makefile.icestorm to the board you plan to use.
@@ -12,10 +14,10 @@ First, change the `BOARD` value in Makefile.icestorm to the board you plan to us
 
 Currently supported are:
 * `BOARD ?= upduino` upduino v2 (default, tested on [Gnarly Grey Upduino v2](http://www.gnarlygrey.com/) and [tinyVision.ai Upduino v2.1](https://www.tindie.com/products/tinyvision_ai/upduino-v21-low-cost-fpga-board/))
-* `BOARD ?= icestick` iceStick (*not yet tested and needs LED blink code*)
-* `BOARD ?= tinyfpga` tinyFPGA BX (*not yet tested and needs LED blink code*)
-* `BOARD ?= icebreaker` icebreaker (doesn't have pcf file, I don't own one to test, needs LED blink code)
-* `BOARD ?= tomu` tomu (doesn't have pcf file, I don't own one to test, needs LED blink code)
+* `BOARD ?= icestick` [Lattice iceStick](http://www.latticesemi.com/icestick) (*not yet tested and needs LED blink code*)
+* `BOARD ?= tinyfpga` [tinyFPGA BX](https://www.crowdsupply.com/tinyfpga/tinyfpga-bx) (*not yet tested and needs LED blink code*)
+* `BOARD ?= icebreaker` [icebreaker FPGA](https://www.crowdsupply.com/1bitsquared/icebreaker-fpga) (doesn't have pcf file, I don't own one to test, needs LED blink code)
+* `BOARD ?= tomu` [tomu FPGA - I think this is the right link](https://www.crowdsupply.com/sutajio-kosagi/fomu) (doesn't have pcf file, I don't own one to test, needs LED blink code)
 
 Next, copy the appropriate "top" source file to `top.v`. For instance, if you're building for icestick, do
 
